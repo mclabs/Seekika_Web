@@ -21,6 +21,7 @@ class Story(db.Model):
 '''Locations Model'''
 class Location(db.Model):
     location=db.StringProperty()
+    lat=db.StringProperty()
     
     def to_dict(self):
         return dict([(p, unicode(getattr(self, p))) for p in self.properties()])
